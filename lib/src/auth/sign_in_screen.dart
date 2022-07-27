@@ -1,7 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:quitanda/src/auth/components/custom_text_field.dart';
+import 'package:quitanda/src/base_screen.dart';
 import 'package:quitanda/src/config/custom_colors.dart';
+
+import 'sign_up_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -21,7 +24,7 @@ class SignInScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text.rich(
-                      TextSpan(style: TextStyle(fontSize: 40), children: [
+                      TextSpan(style: const TextStyle(fontSize: 40), children: [
                         const TextSpan(
                             text: 'Green',
                             style: TextStyle(
@@ -84,7 +87,11 @@ class SignInScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(18),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (context) => BaseScreen()));
+                        },
                         child: const Text(
                           "Entrar",
                           style: TextStyle(fontSize: 18),
@@ -136,7 +143,10 @@ class SignInScreen extends StatelessWidget {
                             width: 2,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SignUpScreen()));
+                        },
                         child: const Text(
                           "Criar conta",
                           style: TextStyle(fontSize: 18),
