@@ -1,8 +1,9 @@
 import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quitanda/src/auth/components/custom_text_field.dart';
 import 'package:quitanda/src/config/custom_colors.dart';
+
+import 'components/custom_text_field.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
